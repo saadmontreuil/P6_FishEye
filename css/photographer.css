@@ -172,3 +172,62 @@ form input {
     object-position: center;
     border-radius: 25rem;
   }
+
+  /* media */
+  .photograph-media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+  }
+  
+  .photograph-medium {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .medium-container img {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .medium-container video {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .infos-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+  
+  .infos-container h3 {
+    color: #901c1c;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+  }
+  
+  .likes {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #901c1c;
+    font-family: "DM Sans", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: right;
+  }
