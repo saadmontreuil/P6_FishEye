@@ -178,6 +178,7 @@ form input {
     display: flex;
     flex-wrap: wrap;
     gap: 8rem;
+    padding-left: 50px;
   }
   
   .photograph-medium {
@@ -230,4 +231,34 @@ form input {
     line-height: 31px;
     letter-spacing: 0em;
     text-align: right;
+  }
+
+
+
+
+  .order-by {
+    margin: 3rem 2rem;
+  }
+  .order-by__label {
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-right: 2rem;
+  }
+  .order-by__select {
+    background: #901C1C;
+    color: white;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+  }
+  .order-by__select option {
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+  }
+  .order-by__option {
+    font-size: 1.5rem;
+    font-weight: bold;
   }

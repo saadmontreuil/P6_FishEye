@@ -12,11 +12,10 @@ class DisplayMedia {
       console.log(selectdata);
       const element = medium.createMedia();
       console.log(medium);
-      if (element !== undefined){
-
+      if (element !== undefined) {
         this.mediaWrapper.appendChild(element.creatHtml());
       }
-      
     });
+    SorterMedia.sorted();
   }
 }

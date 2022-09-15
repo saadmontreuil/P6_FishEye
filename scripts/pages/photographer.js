@@ -18,10 +18,10 @@ const init = async () => {
   Template.PhotographerHeader();
 
   // Build Sorter and Media
-  // const Sorter = new SorterMedia(mediaData);
-  // mediaData = Sorter.sorted();
+
   const displayMedia = new DisplayMedia(mediaData, photographerData.name);
   displayMedia.displayMedia();
+  
 };
 
 init();

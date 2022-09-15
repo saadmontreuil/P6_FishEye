@@ -14,6 +14,7 @@ class Image {
   creatHtml() {
     const card = document.createElement('article');
     card.setAttribute('aria-label', 'carte Media');
+    
 
     const mediumContainer = document.createElement('div');
     mediumContainer.classList.add('medium-container');
@@ -52,6 +53,9 @@ class Image {
     elementLikes.appendChild(elementLikesCount);
     elementLikes.appendChild(elementLikesBtn);
     infosContainer.appendChild(elementLikes);
+    const date = document.createElement('time');
+    date.setAttribute('datetime', this.date);
+    card.appendChild(date);
 
     return card;
   }
