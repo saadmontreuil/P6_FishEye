@@ -8,11 +8,11 @@ const init = async () => {
   const photographerData = photographers.find(
     (photographer) => photographer.id === photographerId,
   );
-  console.log(photographerData);
+  
   const mediaData = media.filter(
     (media) => media.photographerId === photographerId,
   );
-  console.log(mediaData);
+  
 
   const Template = new Photographer(photographerData);
   Template.PhotographerHeader();
@@ -21,7 +21,8 @@ const init = async () => {
 
   const displayMedia = new DisplayMedia(mediaData, photographerData.name);
   displayMedia.displayMedia();
-  
+  const sorterMedia = new SorterMedia();
+  sorterMedia.sorted();
 };
 
 init();

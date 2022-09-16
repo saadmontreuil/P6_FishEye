@@ -1,8 +1,8 @@
-class Image {
+class Video {
   constructor(data, photograperName) {
     this.photograperName = photograperName;
-    this.type = 'image';
-    this.medium = data.image;
+    this.type = 'video';
+    this.medium = data.video;
     this.id = data.id;
     this.photographerId = data.id;
     this.title = data.title;
@@ -26,7 +26,7 @@ class Image {
     card.appendChild(infosContainer);
 
     // Media
-    const elementMedium = document.createElement('img');
+    const elementMedium = document.createElement('video');
     elementMedium.setAttribute('src', `assets/images/${this.photograperName}/${this.medium}`);
     elementMedium.setAttribute('tabindex', '0');
     elementMedium.setAttribute('aria-label', 'medium');
@@ -58,4 +58,5 @@ class Image {
 
     return card;
   }
+
 }

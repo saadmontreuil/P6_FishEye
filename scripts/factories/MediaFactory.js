@@ -9,8 +9,8 @@ class MediaFactory {
       return new Image(this.data, this.photograperName);
     }
 
-    // if (this.data.hasOwnProperty('video')) {
-    //   return new Video(this.data, this.photograperName);
-    // }
+    if (this.data.hasOwnProperty('video')) {
+      return new Video(this.data, this.photograperName);
+    }
   }
 }
