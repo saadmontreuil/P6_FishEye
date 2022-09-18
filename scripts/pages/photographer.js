@@ -8,11 +8,10 @@ const init = async () => {
   const photographerData = photographers.find(
     (photographer) => photographer.id === photographerId,
   );
-  
+
   const mediaData = media.filter(
     (media) => media.photographerId === photographerId,
   );
-  
 
   const Template = new Photographer(photographerData);
   Template.PhotographerHeader();

@@ -11,7 +11,15 @@ class SorterMedia {
     const galleryContent = Array.from(document.querySelectorAll('.photograph-medium'));
     console.log(galleryContent);
 
-    orderByButton.addEventListener('click', (e) => {
+    if (orderByButton.value === 'Popularité') {
+      gallery.innerHTML = '';
+
+      galleryContent.sort((a, b) => b.childNodes[1].childNodes[1].textContent - a.childNodes[1].childNodes[1].textContent);
+
+      sortedToDOM(galleryContent, gallery);
+    }
+
+    orderByButton.addEventListener('change', (e) => {
       switch (e.target.value) {
         case 'Popularité':
           gallery.innerHTML = '';

@@ -58,5 +58,4 @@ class Video {
 
     return card;
   }
-
 }
