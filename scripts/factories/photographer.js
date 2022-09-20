@@ -1,5 +1,5 @@
 class Photographer {
-  constructor(data) {
+  constructor(data , likes) {
     this.name = data.name;
     this.id = data.id;
     this.city = data.city;
@@ -7,6 +7,7 @@ class Photographer {
     this.tagline = data.tagline;
     this.price = data.price;
     this.portrait = data.portrait;
+    this.likes = likes;
   }
 
   PhotographerCard() {
@@ -65,6 +66,7 @@ class Photographer {
 
   PhotographerHeader() {
     const $pageWrapper = document.querySelector('.photograph-header');
+    const main = document.querySelector('#main');
     const article = document.createElement('article');
     const divHeader = document.createElement('div');
     const namePhotographer = document.createElement('h1');
@@ -114,5 +116,22 @@ class Photographer {
 
     // $pageWrapper.innerHTML = html
     // console.log("grgrmgfrgfgfgfg");
+  }
+
+  createCounter() {
+    const counter = document.createElement('aside');
+    counter.classList.add('photographer-counter');
+
+    counter.innerHTML = `
+        <div class="photographer-counter_likes">
+            <p>${this.likes}</p>
+            <i class="fas fa-heart"></i>
+        </div>
+        <div class="photographer-counter_price">
+            <p>${this.price}€ / jour</p>
+        </div>
+    `;
+    console.log(counter);
+    main.appendChild(counter);
   }
 }

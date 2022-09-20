@@ -22,6 +22,29 @@ const init = async () => {
   displayMedia.displayMedia();
   const sorterMedia = new SorterMedia();
   sorterMedia.sorted();
+  
+
+
+  let numberOfLikes = 0;
+
+              
+
+  mediaData.forEach(media => {
+                        
+    if(photographerId === media.photographerId){
+        numberOfLikes += media.likes
+    }
+    
+})
+
+//CREATE COUNTER
+const counter = new Photographer(photographerData,numberOfLikes);
+   
+        counter.createCounter()
+    
+
+
+
 };
 
 init();

@@ -239,12 +239,12 @@ form input {
   .order-by {
     margin: 3rem 2rem;
   }
-  .order-by__label {
+  .order-by_label {
     font-weight: bold;
     font-size: 1.7rem;
     margin-right: 2rem;
   }
-  .order-by__select {
+  .order-by_select {
     background: #901C1C;
     color: white;
     padding: 1.5rem 2rem;
@@ -252,13 +252,45 @@ form input {
     font-weight: bold;
     border-radius: 0.5rem;
   }
-  .order-by__select option {
+  .order-by_select option {
     padding: 1.5rem 2rem;
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 0.5rem;
   }
-  .order-by__option {
+  .order-by_option {
     font-size: 1.5rem;
     font-weight: bold;
   }
+
+
+
+
+
+
+  .photographer-counter {
+    align-items: center;
+    background: #DB8876;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    bottom: 0;
+    display: flex;
+    font-size: 30px;
+    justify-content: space-around;
+    padding: 10px;
+    position: fixed;
+    right: 100px;
+    width: 320px;
+    z-index: 99;
+  }
+  .photographer-counter_likes{
+    display: flex;
+  }
+  .photographer-counter_likes i {
+    margin-left: 10px;
+    margin-top: 31px;
+  }
+  @media (max-width: 991.98px) {
+    .photographer-counter {
+      display: none;
+    }
