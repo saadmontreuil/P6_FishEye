@@ -30,11 +30,11 @@ class Image {
     elementMedium.setAttribute('src', `assets/images/${this.photograperName}/${this.medium}`);
     elementMedium.setAttribute('tabindex', '0');
     elementMedium.setAttribute('aria-label', 'medium');
-    elementMedium.setAttribute('alt', `${this.title}`);
+    elementMedium.setAttribute('alt', `photo du ${this.title}`);
     mediumContainer.appendChild(elementMedium);
 
     // Titre
-    const titleCard = document.createElement('h3');
+    const titleCard = document.createElement('h2');
     titleCard.textContent = this.title;
     infosContainer.appendChild(titleCard);
 

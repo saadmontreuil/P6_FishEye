@@ -34,7 +34,7 @@ class Video {
     mediumContainer.appendChild(elementMedium);
 
     // Titre
-    const titleCard = document.createElement('h3');
+    const titleCard = document.createElement('h2');
     titleCard.textContent = this.title;
     infosContainer.appendChild(titleCard);
 
