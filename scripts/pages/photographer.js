@@ -35,6 +35,27 @@ const init = async () => {
   const counter = new Photographer(photographerData, numberOfLikes);
 
   counter.createCounter();
+
+
+// Event Modal Btn
+const modal = document.getElementById('contact_modal');
+const contactBtn = document.querySelector('#header-btn');
+const modalCloseBtn = document.getElementById('modal-btn-close');
+const submitBtn = document.getElementById("btn-submit");
+
+contactBtn.addEventListener("click", (e) => {
+  displayModal();
+});
+
+modalCloseBtn.addEventListener('click', (e) => {
+  closeModal();
+});
+
+
+
 };
 
 init();
+
+
+

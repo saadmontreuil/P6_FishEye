@@ -27,7 +27,7 @@
     </form>
       <div class="photograph-media"></div>
     </main>
-    <div id="contact_modal">
+    <!-- <div id="contact_modal">
 			<div class="modal">
 				<header>
           <h2>Contactez-moi</h2>
@@ -42,7 +42,47 @@
           <button class="contact_button">Envoyer</button>
 				</form>
 			</div>
-		</div>
+		</div> -->
+
+    <div id="contact_modal" role="dialog" aria-label="formulaire de contact" aria-modal="true" aria-hidden="true" tabindex="-1" class="modal">
+      <div>
+        <header class="modal-header">
+          <div class="modal-header-infos">
+            <h2 class="modal-header-title">Contactez-moi</h2>
+            <span id="modal-header-photographer-name"></span>
+          </div>
+          <div class="modal-header-closebtn"> 
+            <img src="assets/icons/close.svg" alt="icone closebtn" id="modal-btn-close" tabindex="0" role="button"/>
+          </div>
+        </header>
+        <form id="form_contact" aria-label="formulaire">
+          <div class="inputs">
+            <p>
+              <label for="firstname">Prénom</label>
+              <input type="text" name="firstname" id="firstname" placeholder="Prénom" />
+            </p>
+            <p>
+              <label for="lastname">Nom</label>
+              <input type="text" name="lastname" id="lastname" placeholder="Nom" />
+            </p>
+            <p>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Mail" />
+            </p>
+            <p>
+              <label for="message">Message</label>
+              <input type="text" name="message" id="message" />
+            </p>
+          </div>
+          <button type="submit" id="submit" class="contact_button">
+            Envoyer
+          </button>
+        </form>
+      </div>
+    </div>
+
+
+
     <script src="/scripts/factories/photographer.js"></script>
     <script src="scripts/factories/Image.js"></script>
     <script src="scripts/factories/Video.js"></script>
