@@ -1,3 +1,8 @@
+main{
+  padding: 0px 30px;
+}
+
+
 #contact_modal {
     display: none;
 }
@@ -5,7 +10,7 @@
 .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
-    margin: 0 100px;
+    padding: 0 100px;
 }
 
 .contact_button {
@@ -178,7 +183,7 @@ form input {
     display: flex;
     flex-wrap: wrap;
     gap: 8rem;
-    padding-left: 50px;
+    
   }
   
   .photograph-medium {
@@ -237,12 +242,15 @@ form input {
 
 
   .order-by {
-    margin: 3rem 2rem;
+    display: flex;
+    flex-direction: row;
+    
   }
   .order-by_label {
     font-weight: bold;
     font-size: 1.7rem;
     margin-right: 2rem;
+    margin-left: 20px;
   }
   .order-by_select {
     background: #901C1C;
@@ -294,3 +302,4 @@ form input {
     .photographer-counter {
       display: none;
     }
+  }

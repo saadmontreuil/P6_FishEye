@@ -16,35 +16,25 @@ const init = async () => {
   const Template = new Photographer(photographerData);
   Template.PhotographerHeader();
 
-  // Build Sorter and Media
-
   const displayMedia = new DisplayMedia(mediaData, photographerData.name);
   displayMedia.displayMedia();
   const sorterMedia = new SorterMedia();
   sorterMedia.sorted();
-  
-
+  const like = new Like();
+  like.liked();
 
   let numberOfLikes = 0;
 
-              
-
-  mediaData.forEach(media => {
-                        
-    if(photographerId === media.photographerId){
-        numberOfLikes += media.likes
+  mediaData.forEach((media) => {
+    if (photographerId === media.photographerId) {
+      numberOfLikes += media.likes;
     }
-    
-})
+  });
 
-//CREATE COUNTER
-const counter = new Photographer(photographerData,numberOfLikes);
-   
-        counter.createCounter()
-    
+  // CREATE COUNTER
+  const counter = new Photographer(photographerData, numberOfLikes);
 
-
-
+  counter.createCounter();
 };
 
 init();
