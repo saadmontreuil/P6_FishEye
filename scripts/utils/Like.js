@@ -1,23 +1,45 @@
 class Like {
+
+
+  static increment(element, value){
+    element.textContent = `${++value}`;
+  };
+
+  static addLikes() {
+    const counterElement = this.previousElementSibling;
+    const counterValue = Number(counterElement.textContent);
+
+    const totalLikesElement = document.querySelector('.photographer-counter_likes p');
+
+    const totalLikesValue = Number(totalLikesElement.textContent);
+    console.log(totalLikesValue);
+
+    Like.increment(counterElement, counterValue);
+    Like.increment(totalLikesElement, totalLikesValue);
+  }
+
+
+
   liked() {
-    function addLikes() {
-      const counterElement = this.previousElementSibling;
-      const counterValue = Number(counterElement.textContent);
+    // const increment = (element, value) => {
+    //   element.textContent = `${++value}`;
+    // };
 
-      const totalLikesElement = document.querySelector('.photographer-counter_likes p');
+    // function addLikes() {
+    //   const counterElement = this.previousElementSibling;
+    //   const counterValue = Number(counterElement.textContent);
 
-      const totalLikesValue = Number(totalLikesElement.textContent);
-      console.log(totalLikesValue);
+    //   const totalLikesElement = document.querySelector('.photographer-counter_likes p');
 
-      increment(counterElement, counterValue);
-      increment(totalLikesElement, totalLikesValue);
-    }
+    //   const totalLikesValue = Number(totalLikesElement.textContent);
+    //   console.log(totalLikesValue);
 
-    const increment = (element, value) => {
-      element.textContent = `${++value}`;
-    };
+    //   Like.increment(counterElement, counterValue);
+    //   Like.increment(totalLikesElement, totalLikesValue);
+    // }
 
     const likes = document.querySelectorAll('.heart-btn');
-    likes.forEach((like) => like.addEventListener('click', addLikes));
+    console.log(likes);
+    likes.forEach((like) => like.addEventListener('click', Like.addLikes));
   }
 }

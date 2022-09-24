@@ -26,7 +26,7 @@ main{
     cursor: pointer;
 }
 
-.modal {
+/* .modal {
     border-radius: 5px;
     background-color: #DB8876;
     width: 50%;
@@ -36,7 +36,7 @@ main{
     justify-content: space-between;
     padding: 35px;
     margin: auto;
-}
+} */
 
 .modal header {
     justify-content: space-between;
@@ -50,7 +50,7 @@ main{
 .modal header h2 {
     font-size: 64px;
     font-weight: normal;
-    text-align: center;
+    text-align: left;
 }
 
 form {
@@ -244,6 +244,7 @@ form input {
   .order-by {
     display: flex;
     flex-direction: row;
+    margin-bottom: 73px;
     
   }
   .order-by_label {
@@ -304,7 +305,7 @@ form input {
     }
   }
   :focus-visible {
-    outline: 6px dashed rgb(40, 2, 129);
+    outline: 6px dashed #901C1C;
   }
   .photographer-counter_price {
     display: flex;
@@ -323,7 +324,22 @@ form input {
   /* contact_modal */
 
 .modal {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  overflow: auto;
+  animation: modalIn 0.5s;
+  transition: opacity 0.5s;
+  
+}
+#containform{
+  background-color:rgba(255, 255, 255, 0.9);
   top: 0;
   left: 0;
   right: 0;
@@ -333,6 +349,8 @@ form input {
   margin: auto;
   width: 669px;
   box-sizing: border-box;
+
+
 }
 
 .modal-header {

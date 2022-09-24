@@ -45,7 +45,7 @@
 		</div> -->
 
     <div id="contact_modal" role="dialog" aria-label="formulaire de contact" aria-modal="true" aria-hidden="true" tabindex="-1" class="modal">
-      <div>
+      <div id="containform">
         <header class="modal-header">
           <div class="modal-header-infos">
             <h2 class="modal-header-title">Contactez-moi</h2>
@@ -59,19 +59,19 @@
           <div class="inputs">
             <p>
               <label for="firstname">Prénom</label>
-              <input type="text" name="firstname" id="firstname" placeholder="Prénom" />
+              <input type="text" name="firstname" id="firstname" placeholder="Prénom" required />
             </p>
             <p>
               <label for="lastname">Nom</label>
-              <input type="text" name="lastname" id="lastname" placeholder="Nom" />
+              <input type="text" name="lastname" id="lastname" placeholder="Nom" required />
             </p>
             <p>
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" placeholder="Mail" />
+              <input type="email" name="email" id="email" placeholder="Mail" required />
             </p>
             <p>
               <label for="message">Message</label>
-              <input type="text" name="message" id="message" />
+              <input type="text" name="message" id="message" required />
             </p>
           </div>
           <button type="submit" id="submit" class="contact_button">

@@ -16,6 +16,5 @@ class DisplayMedia {
         this.mediaWrapper.appendChild(element.creatHtml());
       }
     });
-    // SorterMedia.sorted();
   }
 }

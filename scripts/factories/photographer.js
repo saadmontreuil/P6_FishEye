@@ -81,6 +81,7 @@ class Photographer {
     tagline.setAttribute('class', 'tagline');
     headerBtn.setAttribute('id', 'header-btn');
     headerBtn.setAttribute('class', 'contact_button');
+    headerBtn.setAttribute('aria-label', `Contact Me`);
     headerBtn.setAttribute('onclick', 'openModal()');
     PhotographerDiv.setAttribute('class', 'photograph-header-portrait');
     img.setAttribute('src', `assets/photographers/${this.portrait}`);
