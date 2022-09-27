@@ -46,6 +46,7 @@ class Video {
     elementLikesCount.textContent = this.likes;
     const elementLikesBtn = document.createElement('i');
     elementLikesBtn.classList.add('fa-solid', 'fa-heart', 'heart-btn');
+    elementLikesBtn.setAttribute('id', 'heartNotLiked');
     elementLikesBtn.setAttribute('tabindex', '0');
     elementLikesBtn.setAttribute('aria-label', 'like');
     elementLikesBtn.setAttribute('role', 'button');
