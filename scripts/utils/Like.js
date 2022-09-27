@@ -1,12 +1,11 @@
 class Like {
-
-
-  static increment(element, value){
+  static increment(element, value) {
     element.textContent = `${++value}`;
-  };
-  static disincrement(element, value){
+  }
+
+  static disincrement(element, value) {
     element.textContent = `${--value}`;
-  };
+  }
 
   static addLikes() {
     const counterElement = this.previousElementSibling;
@@ -15,18 +14,15 @@ class Like {
     const counterValue = Number(counterElement.textContent);
 
     const totalLikesElement = document.querySelector('.photographer-counter_likes p');
-    
-    
 
     const totalLikesValue = Number(totalLikesElement.textContent);
     console.log(totalLikesValue);
 
-    if(this.id === 'heartNotLiked'){
+    if (this.id === 'heartNotLiked') {
       Like.increment(counterElement, counterValue);
       Like.increment(totalLikesElement, totalLikesValue);
       this.id = 'heartLiked';
-
-    }else if(this.id === 'heartLiked'){
+    } else if (this.id === 'heartLiked') {
       Like.disincrement(counterElement, counterValue);
       Like.disincrement(totalLikesElement, totalLikesValue);
       this.id = 'heartNotLiked';
@@ -35,8 +31,6 @@ class Like {
     // Like.increment(totalLikesElement, totalLikesValue);
     // heartLiked.style.fontWeight = '900';
   }
-
-
 
   liked() {
     // const increment = (element, value) => {

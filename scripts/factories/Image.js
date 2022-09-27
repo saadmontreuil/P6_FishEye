@@ -49,7 +49,7 @@ class Image {
     elementLikesBtn.setAttribute('tabindex', '0');
     elementLikesBtn.setAttribute('aria-label', 'like');
     elementLikesBtn.setAttribute('id', 'heartNotLiked');
- 
+
     elementLikesBtn.setAttribute('role', 'button');
     elementLikes.appendChild(elementLikesCount);
     elementLikes.appendChild(elementLikesBtn);

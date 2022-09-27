@@ -57,9 +57,7 @@ const init = async () => {
   });
 
   submitBtn.addEventListener('click', (e) => {
-    e.preventDefault();
     displayMessage();
-    closeModal();
   });
 };
 

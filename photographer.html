@@ -57,21 +57,25 @@
         </header>
         <form id="form_contact" aria-label="formulaire">
           <div class="inputs">
-            <p>
+            <p class="first">
               <label for="firstname">Prénom</label>
-              <input type="text" name="firstname" id="firstname" placeholder="Prénom" required />
+              <input type="text" name="firstname" id="first" placeholder="Prénom" required />
+              <span class="error"></span>
             </p>
-            <p>
+            <p class="last">
               <label for="lastname">Nom</label>
-              <input type="text" name="lastname" id="lastname" placeholder="Nom" required />
+              <input type="text" name="lastname" id="last" placeholder="Nom" required />
+              <span class="error"></span>
             </p>
-            <p>
+            <p class="email">
               <label for="email">Email</label>
               <input type="email" name="email" id="email" placeholder="Mail" required />
+              <span class="error"></span>
             </p>
-            <p>
+            <p class="message">
               <label for="message">Message</label>
               <input type="text" name="message" id="message" required />
+              <span class="error"></span>
             </p>
           </div>
           <button type="submit" id="submit" class="contact_button">
