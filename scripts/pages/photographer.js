@@ -56,9 +56,12 @@ const init = async () => {
     closeModal();
   });
 
-  submitBtn.addEventListener('click', (e) => {
-    displayMessage();
+  document.addEventListener("keydown", (e) => {
+    if (modal.ariaHidden === "false" && e.key === "Escape") {
+      closeModal();
+    }
   });
+
 };
 
 init();

@@ -24,7 +24,7 @@
             <option value="Date" class="order-by_option">Date</option>
             <option value="Titre" class="order-by_option">Titre</option>
         </select>
-    </form>
+      </form>
       <div class="photograph-media"></div>
     </main>
     <!-- <div id="contact_modal">
@@ -44,11 +44,11 @@
 			</div>
 		</div> -->
 
-    <div id="contact_modal" role="dialog" aria-label="formulaire de contact" aria-modal="true" aria-hidden="true" tabindex="-1" class="modal">
+    <div id="contact_modal" role="dialog" aria-label="formulaire de contact" aria-describedby="modal-header-title" aria-modal="true" aria-hidden="true" tabindex="-1" class="modal">
       <div id="containform">
         <header class="modal-header">
           <div class="modal-header-infos">
-            <h2 class="modal-header-title">Contactez-moi</h2>
+            <h2 id="modal-header-title">Contactez-moi</h2>
             <span id="modal-header-photographer-name"></span>
           </div>
           <div class="modal-header-closebtn"> 
@@ -82,6 +82,16 @@
             Envoyer
           </button>
         </form>
+      </div>
+    </div>
+    <div id="lightbox" class="lightbox " aria-hidden="true">
+      <div role="document" class="lightbox-container">
+        <i class="fa-solid fa-chevron-left lightbox_btn " role="button"></i>
+        <div class="lightbox-media"></div>
+        <div class="lightbox-controls">
+          <i class="fa-solid fa-chevron-right lightbox_btn " role="button"></i>
+          <i class="fa-solid fa-xmark lightbox_btn lightbox_btn-close" role="button"></i>
+        </div>
       </div>
     </div>
 

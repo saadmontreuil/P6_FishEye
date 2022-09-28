@@ -48,7 +48,7 @@ main{
 }
 
 .modal header h2 {
-    font-size: 64px;
+    font-size: 50px;
     font-weight: normal;
     text-align: left;
 }
@@ -399,7 +399,7 @@ form input {
 .error{
   opacity: 1;
   font-size: 24px;
-  color: red;
+  color: #901c1c;
 }
 
 form label {
@@ -433,4 +433,69 @@ form input {
   height: 170px;
   vertical-align: top;
   
+}
+
+/* ----------- lightbox ------------ */
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.lightbox {
+  width: 1253px;
+  height: 984px;
+}
+
+.lightbox-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.lightbox-controls {
+  display: flex;
+  flex-direction: column;
+  /* gap:376px; */
+}
+
+.lightbox_btn {
+  color: #901c1c;
+  font-size: 48px;
+}
+
+.lightbox_btn-close {
+  position: absolute;
+  top: 90px;
+}
+
+div.lightbox-media {
+  width: 1050px;
+  height: 900px;
+}
+
+img.slide-medium {
+  width: 1050px;
+  height: 900px;
+  object-fit: cover;
+}
+
+video.slide-medium {
+  width: 1050px;
+  height: 900px;
+  object-fit: cover;
+}
+
+.slide p {
+  color: #901c1c;
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
 }
