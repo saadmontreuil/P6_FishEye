@@ -59,4 +59,18 @@ class Video {
 
     return card;
   }
+
+  LightboxMedia() {
+    const lightboxMedia = document.createElement('div');
+    lightboxMedia.classList.add('lightboxMedia', 'hidden');
+
+    const html = `
+      <video controls class="lightbox-medium" src="assets/images/${this.photograperName}/${this.medium}" alt=${this.title}><p>Votre navigateur ne supporte pas les vidéo HTML5 utilisez ce lien pour visionner la vidéoYour browser doesn't support HTML5 video : 
+      <a href="assets/media/${this.medium}">Vidéo</a> instead.</p></video>
+      <p class="title">${this.title}</p>
+    `;
+    lightboxMedia.innerHTML = html;
+
+    return lightboxMedia;
+  }
 }

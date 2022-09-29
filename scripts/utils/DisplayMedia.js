@@ -3,6 +3,7 @@ class DisplayMedia {
     this.photographerName = photographerName;
     this.media = Media;
     this.mediaWrapper = document.querySelector('.photograph-media');
+    this.lightboxWrapper = document.querySelector('.lightbox-media');
   }
 
   displayMedia() {
@@ -14,6 +15,7 @@ class DisplayMedia {
 
       if (element !== undefined) {
         this.mediaWrapper.appendChild(element.creatHtml());
+        this.lightboxWrapper.appendChild(element.LightboxMedia());
       }
     });
   }

@@ -24,6 +24,8 @@ const init = async () => {
   // tri des media
   const sorterMedia = new SorterMedia();
   sorterMedia.sorted();
+  // lightbox
+  displayLightbox();
   // like les media
   const like = new Like();
   like.liked();
@@ -56,12 +58,11 @@ const init = async () => {
     closeModal();
   });
 
-  document.addEventListener("keydown", (e) => {
-    if (modal.ariaHidden === "false" && e.key === "Escape") {
+  document.addEventListener('keydown', (e) => {
+    if (modal.ariaHidden === 'false' && e.key === 'Escape') {
       closeModal();
     }
   });
-
 };
 
 init();

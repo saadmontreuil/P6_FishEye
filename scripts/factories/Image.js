@@ -60,4 +60,18 @@ class Image {
 
     return card;
   }
+
+  LightboxMedia() {
+    const lightboxMedia = document.createElement('div');
+    lightboxMedia.classList.add('lightboxMedia', 'hidden');
+
+    const html = `
+      <img class="lightbox-medium" src="assets/images/${this.photograperName}/${this.medium}" alt=${this.title}>
+      <p class="title">${this.title}</p>
+    `;
+
+    lightboxMedia.innerHTML = html;
+
+    return lightboxMedia;
+  }
 }
