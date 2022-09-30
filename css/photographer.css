@@ -2,7 +2,6 @@ main{
   padding: 0px 30px;
 }
 
-
 #contact_modal {
     display: none;
 }
@@ -25,18 +24,6 @@ main{
     border-radius: 5px;
     cursor: pointer;
 }
-
-/* .modal {
-    border-radius: 5px;
-    background-color: #DB8876;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
-    margin: auto;
-} */
 
 .modal header {
     justify-content: space-between;
@@ -79,10 +66,7 @@ form input {
     border: none;
     border-radius: 5px;
 }
-
 /* header */
-
-
 
 .bloc-page {
     position: relative;
@@ -244,9 +228,7 @@ form input {
     font-weight: normal;
   }
 
-
-
-
+  /* form tri */
   .order-by {
     display: flex;
     flex-direction: row;
@@ -277,12 +259,7 @@ form input {
     font-size: 1.5rem;
     font-weight: bold;
   }
-
-
-
-
-
-
+/* banier like + prix */
   .photographer-counter {
     align-items: center;
     background: #DB8876;
@@ -319,14 +296,6 @@ form input {
     align-items: center;
   }
   
-  
-
-
-
-
-
-
-
   /* contact_modal */
 
 .modal {
@@ -448,6 +417,8 @@ form input {
 .lightbox {
   width: 1253px;
   height: 984px;
+  margin-left: 20%;
+
 }
 
 .lightbox-container {
@@ -477,19 +448,19 @@ div.lightbox-media {
   height: 900px;
 }
 
-img.slide-medium {
+img.lightbox-medium {
   width: 1050px;
   height: 900px;
   object-fit: cover;
 }
 
-video.slide-medium {
+video.lightbox-medium {
   width: 1050px;
   height: 900px;
   object-fit: cover;
 }
 
-.slide p {
+.lightboxMedia p {
   color: #901c1c;
   font-family: "DM Sans", sans-serif;
   font-size: 24px;

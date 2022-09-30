@@ -6,6 +6,7 @@ const displayModal = () => {
   modal.setAttribute('aria-modal', 'true');
   modal.focus();
   main.setAttribute('aria-hidden', 'true');
+  main.style.position = 'fixed';
   const name = document.querySelector('h1').textContent;
   const modalName = document.getElementById('modal-header-title');
   modalName.textContent = `Contactez-nous pour ${name}`;
@@ -15,6 +16,7 @@ const closeModal = () => {
   const modal = document.getElementById('contact_modal');
   const form = document.getElementById('form_contact');
   const main = document.getElementById('main');
+  main.style.position = 'static';
 
   form.reset();
   modal.style.display = 'none';

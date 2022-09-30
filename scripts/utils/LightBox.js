@@ -38,7 +38,9 @@ const displayLightbox = () => {
 
   lightboxMediaNodes.forEach((node) => {
     node.addEventListener('click', (event) => {
-        startPosition(event.target);
+      startPosition(event.target);
     });
   });
 };
+
+closeBtn.addEventListener('click', closeLightbox);
