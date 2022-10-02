@@ -27,23 +27,7 @@
       </form>
       <div class="photograph-media"></div>
     </main>
-    <!-- <div id="contact_modal">
-			<div class="modal">
-				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" alt="close button" onclick="closeModal()" />
-        </header>
-				<form action="photographer.html" class="order-by">
-          <label for="contact" class="contact" aria-label="form contact">contacter</label>
-					<div>
-						<label>Prénom</label>
-						<input />
-					</div>
-          <button class="contact_button">Envoyer</button>
-				</form>
-			</div>
-		</div> -->
-
+  
     <div id="contact_modal" role="dialog" aria-label="formulaire de contact" aria-describedby="modal-header-title" aria-modal="true" aria-hidden="true" tabindex="-1" class="modal">
       <div id="containform">
         <header class="modal-header">
@@ -59,22 +43,22 @@
           <div class="inputs">
             <p class="first">
               <label for="firstname">Prénom</label>
-              <input type="text" name="firstname" id="first" placeholder="Prénom" required />
+              <input type="text" name="firstname" aria-required="true" id="first" placeholder="Prénom" required />
               <span class="error"></span>
             </p>
             <p class="last">
               <label for="lastname">Nom</label>
-              <input type="text" name="lastname" id="last" placeholder="Nom" required />
+              <input type="text" name="lastname" aria-required="true" id="last" placeholder="Nom" required />
               <span class="error"></span>
             </p>
             <p class="email">
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" placeholder="Mail" required />
+              <input type="email" name="email" aria-required="true" id="email" placeholder="Mail" required />
               <span class="error"></span>
             </p>
             <p class="message">
               <label for="message">Message</label>
-              <input type="text" name="message" id="message" required />
+              <input type="text" name="message" aria-required="true" id="message" required />
               <span class="error"></span>
             </p>
           </div>

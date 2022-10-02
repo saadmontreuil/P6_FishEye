@@ -1,10 +1,11 @@
 const displayModal = () => {
   const modal = document.getElementById('contact_modal');
   const main = document.getElementById('main');
+  const first = document.getElementById('first');
   modal.style.display = 'block';
   modal.setAttribute('aria-hidden', 'false');
   modal.setAttribute('aria-modal', 'true');
-  modal.focus();
+  first.focus();
   main.setAttribute('aria-hidden', 'true');
   main.style.position = 'fixed';
   const name = document.querySelector('h1').textContent;
@@ -48,8 +49,9 @@ const nameChecker = (value, mesaage, inp) => {
   const firstContainer = document.querySelector(`.${inp}`);
   const errorDisplay = document.querySelector(`.${inp} > span`);
   let isValid = false;
+  const regName = /^[a-zA-Z]+[a-zA-Z]+$/;
 
-  if (value.length < 2) {
+  if (!value.match(regName)) {
     firstContainer.classList.add('error');
     errorDisplay.textContent = mesaage;
   } else {

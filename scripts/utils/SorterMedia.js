@@ -1,5 +1,13 @@
+/* eslint max-len: "off" */
+/* eslint no-unused-vars: "off" */
 class SorterMedia {
+  constructor() {
+    this.element = 'test';
+  }
+
   sorted() {
+    const test = this.element;
+
     const sortedToDOM = (array, destination) => {
       array.forEach((arrayElement) => {
         destination.appendChild(arrayElement);
@@ -10,12 +18,15 @@ class SorterMedia {
     const gallery = document.querySelector('.photograph-media');
     const galleryContent = Array.from(document.querySelectorAll('.photograph-medium'));
     console.log(galleryContent);
+    const lightboxcontent = Array.from(document.querySelectorAll('.lightboxMedia'));
+    console.log(lightboxcontent);
+    
+    console.log(galleryContent);
 
     if (orderByButton.value === 'Popularité') {
       gallery.innerHTML = '';
 
       galleryContent.sort((a, b) => b.childNodes[1].childNodes[1].textContent - a.childNodes[1].childNodes[1].textContent);
-
       sortedToDOM(galleryContent, gallery);
     }
 

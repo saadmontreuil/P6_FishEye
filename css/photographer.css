@@ -182,6 +182,7 @@ form input {
     height: 300px;
     object-fit: cover;
     object-position: center;
+    cursor: pointer;
   }
   
   .medium-container video {
@@ -189,6 +190,7 @@ form input {
     height: 300px;
     object-fit: cover;
     object-position: top;
+    cursor: pointer;
   }
   
   .infos-container {
