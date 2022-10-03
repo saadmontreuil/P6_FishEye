@@ -16,18 +16,19 @@ class SorterMedia {
 
     const orderByButton = document.querySelector('#orderBy');
     const gallery = document.querySelector('.photograph-media');
-    const galleryContent = Array.from(document.querySelectorAll('.photograph-medium'));
-    console.log(galleryContent);
+    const galleryContent = Array.from(document.querySelectorAll('.photograph-medium').entries());
+    const gallerylightbox = document.querySelector('.lightbox-media');
     const lightboxcontent = Array.from(document.querySelectorAll('.lightboxMedia'));
-    console.log(lightboxcontent);
-    
-    console.log(galleryContent);
 
     if (orderByButton.value === 'Popularité') {
       gallery.innerHTML = '';
 
-      galleryContent.sort((a, b) => b.childNodes[1].childNodes[1].textContent - a.childNodes[1].childNodes[1].textContent);
-      sortedToDOM(galleryContent, gallery);
+      galleryContent.sort((a, b) => b[1].childNodes[1].childNodes[1].textContent - a[1].childNodes[1].childNodes[1].textContent);
+      const sortedPopular = galleryContent.map((element) => element[1]);
+      const sortedLightboxPopular = galleryContent.map((element) => lightboxcontent[element[0]]);
+
+      sortedToDOM(sortedPopular, gallery);
+      sortedToDOM(sortedLightboxPopular, gallerylightbox);
     }
 
     orderByButton.addEventListener('change', (e) => {
@@ -35,25 +36,31 @@ class SorterMedia {
         case 'Popularité':
           gallery.innerHTML = '';
 
-          galleryContent.sort((a, b) => b.childNodes[1].childNodes[1].textContent - a.childNodes[1].childNodes[1].textContent);
-
-          sortedToDOM(galleryContent, gallery);
+          galleryContent.sort((a, b) => b[1].childNodes[1].childNodes[1].textContent - a[1].childNodes[1].childNodes[1].textContent);
+          const sorteDpopular = galleryContent.map((element) => element[1]);
+          const sortedLightboXPopular = galleryContent.map((element) => lightboxcontent[element[0]]);
+          sortedToDOM(sorteDpopular, gallery);
+          sortedToDOM(sortedLightboXPopular, gallerylightbox);
           break;
 
         case 'Date':
           gallery.innerHTML = '';
 
-          galleryContent.sort((a, b) => b.childNodes[2].dateTime.localeCompare(a.childNodes[2].dateTime));
-
-          sortedToDOM(galleryContent, gallery);
+          galleryContent.sort((a, b) => b[1].childNodes[2].dateTime.localeCompare(a[1].childNodes[2].dateTime));
+          const sortedDate = galleryContent.map((element) => element[1]);
+          const sortedLightboxDate = galleryContent.map((element) => lightboxcontent[element[0]]);
+          sortedToDOM(sortedDate, gallery);
+          sortedToDOM(sortedLightboxDate, gallerylightbox);
           break;
 
         case 'Titre':
           gallery.innerHTML = '';
 
-          galleryContent.sort((a, b) => a.childNodes[1].childNodes[0].textContent.localeCompare(b.childNodes[1].childNodes[0].textContent));
-
-          sortedToDOM(galleryContent, gallery);
+          galleryContent.sort((a, b) => a[1].childNodes[1].childNodes[0].textContent.localeCompare(b[1].childNodes[1].childNodes[0].textContent));
+          const sortedTitle = galleryContent.map((element) => element[1]);
+          const sortedLightboxTitle = galleryContent.map((element) => lightboxcontent[element[0]]);
+          sortedToDOM(sortedTitle, gallery);
+          sortedToDOM(sortedLightboxTitle, gallerylightbox);
           break;
 
         default:

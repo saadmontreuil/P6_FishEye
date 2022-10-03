@@ -9,7 +9,6 @@ class DisplayMedia {
   displayMedia() {
     this.media.forEach((media) => {
       const medium = new MediaFactory(media, this.photographerName);
-      const selectdata = medium.data;
 
       const element = medium.createMedia();
 
