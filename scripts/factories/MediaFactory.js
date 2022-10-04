@@ -1,3 +1,5 @@
+/* eslint no-unused-vars: "off" */
+/* eslint no-undef: "off" */
 class MediaFactory {
   constructor(data, photograperName) {
     this.data = data;
@@ -5,12 +7,13 @@ class MediaFactory {
   }
 
   createMedia() {
-    if (this.data.hasOwnProperty('image')) {
+    if (Object.prototype.hasOwnProperty.call(this.data, 'image')) {
       return new Image(this.data, this.photograperName);
     }
 
-    if (this.data.hasOwnProperty('video')) {
+    if (Object.prototype.hasOwnProperty.call(this.data, 'video')) {
       return new Video(this.data, this.photograperName);
     }
+    return undefined;
   }
 }

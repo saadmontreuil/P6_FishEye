@@ -1,3 +1,5 @@
+/* eslint no-unused-vars: "off" */
+/* eslint no-undef: "off" */
 class DisplayMedia {
   constructor(Media, photographerName) {
     this.photographerName = photographerName;

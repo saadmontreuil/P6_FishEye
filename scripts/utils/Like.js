@@ -1,22 +1,24 @@
+/* eslint no-unused-vars: "off" */
+/* eslint no-undef: "off" */
+/* eslint no-param-reassign: "off" */
 class Like {
   static increment(element, value) {
-    element.textContent = `${++value}`;
+    element.textContent = `${value += 1}`;
   }
 
   static disincrement(element, value) {
-    element.textContent = `${--value}`;
+    element.textContent = `${value -= 1}`;
   }
 
   static addLikes() {
     const counterElement = this.previousElementSibling;
     const elementlike = this.id;
-    console.log(elementlike);
+
     const counterValue = Number(counterElement.textContent);
 
     const totalLikesElement = document.querySelector('.photographer-counter_likes p');
 
     const totalLikesValue = Number(totalLikesElement.textContent);
-    console.log(totalLikesValue);
 
     if (this.id === 'heartNotLiked') {
       Like.increment(counterElement, counterValue);
@@ -29,9 +31,8 @@ class Like {
     }
   }
 
-  liked() {
+  static liked() {
     const likes = document.querySelectorAll('.heart-btn');
-    console.log(likes);
 
     likes.forEach((like) => like.addEventListener('click', Like.addLikes));
   }

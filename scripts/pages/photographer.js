@@ -1,8 +1,11 @@
+/* eslint no-unused-vars: "off" */
+/* eslint no-undef: "off" */
+/* eslint no-console: "off" */
 const getPhotographers = async () => fetch('data/photographers.json')
   .then((res) => res.json())
   .catch((err) => console.log('eRROR', err));
 const init = async () => {
-  const photographerId = parseInt(new URLSearchParams(location.search).get('id'), 10);
+  const photographerId = parseInt(new URLSearchParams(window.location.search).get('id'), 10);
   const { photographers, media } = await getPhotographers();
   const photographerData = photographers.find(
     (photographer) => photographer.id === photographerId,
@@ -10,10 +13,10 @@ const init = async () => {
   // cest il trouve pas le id il renvoi a la page d'acceuil
 
   if (!photographerData) {
-    location.href = 'index.html';
+    window.location.href = 'index.html';
   }
   const mediaData = media.filter(
-    (media) => media.photographerId === photographerId,
+    (medias) => medias.photographerId === photographerId,
   );
   // photographer header de la page photographer
   const Template = new Photographer(photographerData);
@@ -27,14 +30,13 @@ const init = async () => {
   // lightbox
   displayLightbox();
   // like les media
-  const like = new Like();
-  like.liked();
+  Like.liked();
 
   let numberOfLikes = 0;
 
-  mediaData.forEach((media) => {
-    if (photographerId === media.photographerId) {
-      numberOfLikes += media.likes;
+  mediaData.forEach((mediaa) => {
+    if (photographerId === mediaa.photographerId) {
+      numberOfLikes += mediaa.likes;
     }
   });
 

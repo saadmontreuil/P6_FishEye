@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: "off" */
 class Video {
   constructor(data, photograperName) {
     this.photograperName = photograperName;

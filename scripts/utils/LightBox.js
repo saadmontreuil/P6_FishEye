@@ -1,3 +1,5 @@
+/* eslint no-unused-vars: "off" */
+/* eslint no-undef: "off" */
 const main = document.getElementById('main');
 const lightboxNode = document.getElementById('lightbox');
 const lightboxMedia = document.querySelector('.lightbox-media');
@@ -26,9 +28,9 @@ const closeLightbox = () => {
 
 const startPosition = (node) => {
   const attribut = node.getAttribute('src');
-  console.log(attribut);
+
   const imageLightbox = document.querySelector('.lightbox-media').querySelector(`[src="${attribut}"]`);
-  console.log(imageLightbox);
+
   imageLightbox.parentElement.classList.replace('hidden', 'visible');
   openLightbox();
 };

@@ -1,3 +1,5 @@
+/* eslint no-unused-vars: "off" */
+/* eslint no-console: "off" */
 const displayModal = () => {
   const modal = document.getElementById('contact_modal');
   const main = document.getElementById('main');
@@ -31,7 +33,7 @@ function displayMessage() {
   const lastName = document.getElementById('last').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
-  // const html = `Merci ${firstName} ${lastName} de nous avoir contacté à propos de ${message}. Un de nos conseiller vous contactera soit à l’adresse ${email} dans les plus brefs délais pour traiter votre demande :`;
+
   const messageK = `
     'firstname': ${firstName},
     'lastname': ${lastName},
@@ -82,8 +84,8 @@ const messageChecker = (value) => {
   const messageContainer = document.querySelector('#message');
   const errorDisplay = document.querySelector('.message >.error');
   let isValid = false;
-
-  if (value.length < 6) {
+  const regMessage = / [a-zA-Z]+([a-zA-Z]+(\s+[a-zA-Z]+)+)[a-zA-Z]+ /i;
+  if (!value.match(regMessage)) {
     errorDisplay.textContent = 'Veuillez entrer un message valide.';
   } else {
     errorDisplay.textContent = '';
@@ -112,7 +114,7 @@ inputs.forEach((input) => {
         messageChecker(e.target.value);
         break;
       default:
-        null;
+        break;
     }
   });
 });
@@ -123,15 +125,15 @@ const onSubmit = (e) => {
   /**
    * Récupérer les valeurs des inputs du formulaire
    */
-  const formValues = (inputs) => {
+  const formValues = (input) => {
     const data = [];
 
-    for (let i = 0; i < inputs.length; i++) {
+    for (let i = 0; i < input.length; i += 1) {
       if (
-        inputs[i].type === 'text'
-        || inputs[i].type === 'email'
+        input[i].type === 'text'
+        || input[i].type === 'email'
       ) {
-        data.push(inputs[i].value);
+        data.push(input[i].value);
       }
     }
     return data;
@@ -152,7 +154,7 @@ const onSubmit = (e) => {
 
     let isValid = true;
 
-    for (let i = 0; i < validInputs.length; i++) {
+    for (let i = 0; i < validInputs.length; i += 1) {
       if (validInputs[i] === false) {
         isValid = false;
         break;
@@ -168,9 +170,8 @@ const onSubmit = (e) => {
   } else {
     const modal = document.getElementById('contact_modal');
     modal.style.display = 'block';
-    console.log('Formulaire invalide');
   }
 };
 const submitInput = document.querySelector('#submit');
-console.log(submitInput);
+
 submitInput.addEventListener('click', (e) => onSubmit(e));

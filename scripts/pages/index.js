@@ -1,3 +1,6 @@
+/* eslint no-unused-vars: "off" */
+/* eslint no-undef: "off" */
+/* eslint no-console: "off" */
 const getPhotographers = async () => fetch('data/photographers.json')
   .then((res) => res.json())
   .catch((err) => console.log('error', err));

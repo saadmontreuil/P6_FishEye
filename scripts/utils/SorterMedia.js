@@ -33,7 +33,7 @@ class SorterMedia {
 
     orderByButton.addEventListener('change', (e) => {
       switch (e.target.value) {
-        case 'Popularité':
+        case 'Popularité': {
           gallery.innerHTML = '';
 
           galleryContent.sort((a, b) => b[1].childNodes[1].childNodes[1].textContent - a[1].childNodes[1].childNodes[1].textContent);
@@ -42,8 +42,8 @@ class SorterMedia {
           sortedToDOM(sorteDpopular, gallery);
           sortedToDOM(sortedLightboXPopular, gallerylightbox);
           break;
-
-        case 'Date':
+        }
+        case 'Date': {
           gallery.innerHTML = '';
 
           galleryContent.sort((a, b) => b[1].childNodes[2].dateTime.localeCompare(a[1].childNodes[2].dateTime));
@@ -52,8 +52,8 @@ class SorterMedia {
           sortedToDOM(sortedDate, gallery);
           sortedToDOM(sortedLightboxDate, gallerylightbox);
           break;
-
-        case 'Titre':
+        }
+        case 'Titre': {
           gallery.innerHTML = '';
 
           galleryContent.sort((a, b) => a[1].childNodes[1].childNodes[0].textContent.localeCompare(b[1].childNodes[1].childNodes[0].textContent));
@@ -62,7 +62,7 @@ class SorterMedia {
           sortedToDOM(sortedTitle, gallery);
           sortedToDOM(sortedLightboxTitle, gallerylightbox);
           break;
-
+        }
         default:
           break;
       }
