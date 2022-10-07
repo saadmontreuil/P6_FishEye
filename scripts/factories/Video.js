@@ -45,9 +45,8 @@ class Video {
     const elementLikesCount = document.createElement('span');
     elementLikesCount.classList.add('likesCount');
     elementLikesCount.textContent = this.likes;
-    const elementLikesBtn = document.createElement('i');
-    elementLikesBtn.classList.add('fa-solid', 'fa-heart', 'heart-btn');
-    elementLikesBtn.setAttribute('id', 'heartNotLiked');
+    const elementLikesBtn = document.createElement('em');
+    elementLikesBtn.classList.add('fa-solid', 'fa-heart', 'heart-btn', 'heartNotLiked');
     elementLikesBtn.setAttribute('tabindex', '0');
     elementLikesBtn.setAttribute('aria-label', 'like');
     elementLikesBtn.setAttribute('role', 'button');
@@ -66,9 +65,9 @@ class Video {
     lightboxMedia.classList.add('lightboxMedia', 'hidden');
 
     const html = `
-      <video controls class="lightbox-medium" src="assets/images/${this.photograperName}/${this.medium}" alt=${this.title}><p>Votre navigateur ne supporte pas les vidéo HTML5 utilisez ce lien pour visionner la vidéoYour browser doesn't support HTML5 video : 
+      <video controls class="lightbox-medium" src="assets/images/${this.photograperName}/${this.medium}" alt=photo ${this.title}><p>Votre navigateur ne supporte pas les vidéo HTML5 utilisez ce lien pour visionner la vidéoYour browser doesn't support HTML5 video : 
       <a href="assets/media/${this.medium}">Vidéo</a> instead.</p></video>
-      <p class="title">${this.title}</p>
+      <h2 class="title">${this.title}</h2>
     `;
     lightboxMedia.innerHTML = html;
 

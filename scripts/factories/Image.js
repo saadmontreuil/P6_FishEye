@@ -45,11 +45,10 @@ class Image {
     const elementLikesCount = document.createElement('span');
     elementLikesCount.classList.add('likesCount');
     elementLikesCount.textContent = this.likes;
-    const elementLikesBtn = document.createElement('i');
-    elementLikesBtn.classList.add('fa-solid', 'fa-heart', 'heart-btn');
+    const elementLikesBtn = document.createElement('em');
+    elementLikesBtn.classList.add('fa-solid', 'fa-heart', 'heart-btn', 'heartNotLiked');
     elementLikesBtn.setAttribute('tabindex', '0');
     elementLikesBtn.setAttribute('aria-label', 'like');
-    elementLikesBtn.setAttribute('id', 'heartNotLiked');
 
     elementLikesBtn.setAttribute('role', 'button');
     elementLikes.appendChild(elementLikesCount);
@@ -67,8 +66,8 @@ class Image {
     lightboxMedia.classList.add('lightboxMedia', 'hidden');
 
     const html = `
-      <img class="lightbox-medium" src="assets/images/${this.photograperName}/${this.medium}" alt=${this.title}>
-      <p class="title">${this.title}</p>
+      <img class="lightbox-medium" src="assets/images/${this.photograperName}/${this.medium}" alt= picture of ${this.title}>
+      <h2 class="title">${this.title}</h2>
     `;
 
     lightboxMedia.innerHTML = html;

@@ -12,22 +12,22 @@ class Like {
 
   static addLikes() {
     const counterElement = this.previousElementSibling;
-    const elementlike = this.id;
+    const elementlike = this.classList;
 
     const counterValue = Number(counterElement.textContent);
 
-    const totalLikesElement = document.querySelector('.photographer-counter_likes p');
+    const totalLikesElement = document.querySelector('.photographer-counter_likes h2');
 
     const totalLikesValue = Number(totalLikesElement.textContent);
 
-    if (this.id === 'heartNotLiked') {
+    if (this.classList[3] === 'heartNotLiked') {
       Like.increment(counterElement, counterValue);
       Like.increment(totalLikesElement, totalLikesValue);
-      this.id = 'heartLiked';
-    } else if (this.id === 'heartLiked') {
+      this.classList.replace('heartNotLiked', 'heartLiked');
+    } else if (this.classList[3] === 'heartLiked') {
       Like.disincrement(counterElement, counterValue);
       Like.disincrement(totalLikesElement, totalLikesValue);
-      this.id = 'heartNotLiked';
+      this.classList.replace('heartLiked', 'heartNotLiked');
     }
   }
 

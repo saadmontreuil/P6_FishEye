@@ -51,7 +51,7 @@ const nameChecker = (value, mesaage, inp) => {
   const firstContainer = document.querySelector(`.${inp}`);
   const errorDisplay = document.querySelector(`.${inp} > span`);
   let isValid = false;
-  const regName = /^[a-zA-Z]+[a-zA-Z]+$/;
+  const regName = /^[a-zA-ZÀ-ÖØ-öø-ÿ-]+[a-zA-ZÀ-ÖØ-öø-ÿ-]+$/;
 
   if (!value.match(regName)) {
     firstContainer.classList.add('error');

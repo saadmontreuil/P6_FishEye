@@ -117,7 +117,7 @@ form input {
     margin: 1rem 0;
   }
   
-  .photograph-header-infos p.location {
+  .photograph-header-infos h2.location {
     color: #901c1c;
     font-family: "DM Sans", sans-serif;
     font-size: 24px;
@@ -223,11 +223,11 @@ form input {
     letter-spacing: 0em;
     text-align: right;
   }
-  #heartLiked{
-    font-weight: bold;
+  .heartLiked{
+    font-weight: bold !important;
   }
-  #heartNotLiked{
-    font-weight: normal;
+  .heartNotLiked{
+    font-weight: normal !important;
   }
 
   /* form tri */
@@ -271,7 +271,7 @@ form input {
     display: flex;
     font-size: 30px;
     justify-content: space-around;
-    padding: 10px;
+    padding: 24px;
     position: fixed;
     right: 100px;
     width: 320px;
@@ -280,6 +280,15 @@ form input {
   .photographer-counter_likes{
     display: flex;
   }
+  .count_text{
+    font-size: 30px;
+
+  }
+  .count_heart{
+    margin : 5px;
+
+  }
+
   .photographer-counter_likes i {
     margin-left: 10px;
     margin-top: 31px;
@@ -438,12 +447,14 @@ form input {
 .lightbox_btn {
   color: #901c1c;
   font-size: 48px;
+  cursor: pointer;
 }
 
 .lightbox_btn-close {
   position: absolute;
   top: 90px;
 }
+
 
 div.lightbox-media {
   width: 1050px;
@@ -462,7 +473,7 @@ video.lightbox-medium {
   object-fit: cover;
 }
 
-.lightboxMedia p {
+.lightboxMedia h2 {
   color: #901c1c;
   font-family: "DM Sans", sans-serif;
   font-size: 24px;

@@ -53,7 +53,7 @@ class Photographer {
     const article = document.createElement('article');
     const divHeader = document.createElement('div');
     const namePhotographer = document.createElement('h1');
-    const location = document.createElement('p');
+    const location = document.createElement('h2');
     const tagline = document.createElement('p');
     const headerBtn = document.createElement('button');
     const PhotographerDiv = document.createElement('div');
@@ -90,11 +90,11 @@ class Photographer {
     const main = document.querySelector('#main');
     counter.innerHTML = `
         <div class="photographer-counter_likes">
-            <p>${this.likes}</p>
-            <i class="fas fa-heart"></i>
+            <h2 class="count_text">${this.likes}</h2>
+            <em class="count_heart fas fa-heart"></em>
         </div>
         <div class="photographer-counter_price">
-            <p>${this.price}€ / jour</p>
+            <h2 class="count_text">${this.price}€ / jour</h2>
         </div>
     `;
 

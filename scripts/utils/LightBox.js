@@ -57,6 +57,7 @@ const previousPosition = () => {
 
 const displayLightbox = () => {
   const lightboxMediaNodes = document.querySelectorAll('.medium-container');
+  rightBtn.focus();
 
   lightboxMediaNodes.forEach((node) => {
     node.addEventListener('click', (event) => {
