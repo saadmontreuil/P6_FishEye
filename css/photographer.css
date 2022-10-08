@@ -483,3 +483,9 @@ video.lightbox-medium {
   letter-spacing: 0em;
   text-align: left;
 }
+@media screen and (max-width: 1366px) {
+ 
+  html{
+    width: 1400px;
+  }
+}

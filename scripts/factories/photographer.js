@@ -46,6 +46,7 @@ class Photographer {
     parg.appendChild(location);
     parg.appendChild(tagline);
     parg.appendChild(price);
+    article.appendChild(parg);
   }
 
   PhotographerHeader() {
