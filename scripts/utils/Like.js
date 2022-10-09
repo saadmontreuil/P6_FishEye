@@ -34,6 +34,17 @@ class Like {
   static liked() {
     const likes = document.querySelectorAll('.heart-btn');
 
-    likes.forEach((like) => like.addEventListener('click', Like.addLikes));
+    // likes.forEach((like) => like.addEventListener('click', Like.addLikes));
+
+    likes.forEach((like) => {
+      like.addEventListener('click', () => {
+        Like.addLikes.call(like);
+      });
+      like.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          Like.addLikes.call(like);
+        }
+      });
+    });
   }
 }
