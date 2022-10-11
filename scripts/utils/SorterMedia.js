@@ -19,7 +19,7 @@ class SorterMedia {
     const galleryContent = Array.from(document.querySelectorAll('.photograph-medium').entries());
     const gallerylightbox = document.querySelector('.lightbox-media');
     const lightboxcontent = Array.from(document.querySelectorAll('.lightboxMedia'));
-
+    // sort in default by popularity
     if (orderByButton.value === 'Popularité') {
       gallery.innerHTML = '';
 
@@ -33,6 +33,7 @@ class SorterMedia {
 
     orderByButton.addEventListener('change', (e) => {
       switch (e.target.value) {
+        // sorting by Popularité
         case 'Popularité': {
           gallery.innerHTML = '';
 
@@ -43,6 +44,7 @@ class SorterMedia {
           sortedToDOM(sortedLightboXPopular, gallerylightbox);
           break;
         }
+        // sorting by Date
         case 'Date': {
           gallery.innerHTML = '';
 
@@ -53,6 +55,7 @@ class SorterMedia {
           sortedToDOM(sortedLightboxDate, gallerylightbox);
           break;
         }
+        // sorting by Titre
         case 'Titre': {
           gallery.innerHTML = '';
 

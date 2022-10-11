@@ -30,7 +30,7 @@ class Video {
     const elementMedium = document.createElement('video');
     elementMedium.setAttribute('src', `assets/images/${this.photograperName}/${this.medium}`);
     elementMedium.setAttribute('tabindex', '0');
-    elementMedium.setAttribute('aria-label', 'medium');
+    elementMedium.setAttribute('aria-label', `${this.title}`);
     elementMedium.setAttribute('alt', `${this.title}`);
     mediumContainer.appendChild(elementMedium);
 

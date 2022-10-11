@@ -30,7 +30,7 @@ class Image {
     const elementMedium = document.createElement('img');
     elementMedium.setAttribute('src', `assets/images/${this.photograperName}/${this.medium}`);
     elementMedium.setAttribute('tabindex', '0');
-    elementMedium.setAttribute('aria-label', 'medium');
+    elementMedium.setAttribute('aria-label', `photo du ${this.title}`);
     elementMedium.setAttribute('alt', `photo du ${this.title}`);
     mediumContainer.appendChild(elementMedium);
 
